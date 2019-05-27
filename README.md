@@ -3,11 +3,11 @@ This is a very basic setup for getting started developing web-based presentation
 
 Using the web for presentations provides a number of advantages over tools like PowerPoint:
 
- - Far more portable across devices, including smart TVs and wearables
- - Great delivery options such as streaming to large audiences or direct in-browser access from a web site
- - Does not depend upon expensive, proprietary technology
- - Greater automation e.g. generating presentations from data and standardised templates
- - Enables new ways to engage e.g. blurring the boundaries between presentations, web and apps e.g. slide content which changes in realtime in response to user interaction or other data.
+- Far more portable across devices, including smart TVs and wearables
+- Great delivery options such as streaming to large audiences or direct in-browser access from a web site
+- Does not depend upon expensive, proprietary technology
+- Greater automation e.g. generating presentations from data and standardised templates
+- Enables new ways to engage e.g. blurring the boundaries between presentations, web and apps e.g. slide content which changes in realtime in response to user interaction or other data.
 
 PowerPoint use will obviously continue for some time as it is familiar to everyone. This repository is indended to allow early adopters to get started quickly.
 
@@ -50,12 +50,10 @@ Your favourite search engine will help you find lists of commands and explain er
 
 ## Setting up the presentation software
 
-> **Note:** This version of the software includes NTT DATA branding. You will need to be granted permission to download it. Email richard.barton@nttdata.com.
-
 Start up your command line and type in this command to download a copy of the playpen software:
 
 ```
-git clone git://github.com/cioportfolio/nttreveal.git webpres
+git clone git://github.com/cioportfolio/webpres.git
 ```
 
 Typing `dir` (or `ls` on a Mac) will show a list of your folder and you will see a new `webpres` folder there. Move to that folder by typing:
@@ -87,7 +85,7 @@ Now go to a browser and in the address bar type:
 localhost:8000/demo
 ```
 
-You should see the title page of a NTT DATA branded presentation. 
+You should see the title page of a presentation. 
 
 Congratulations! The presentation server is running. Use the blue arrow at the bottom right of the screen to navigate through the demo slides.
 
@@ -105,7 +103,11 @@ After these commands `vagrant up` will get things going again. It will know if y
 
 # Creating your own presentations
 
-## Step 1 - Edit `demo.ejs`
+## Step 1 - Replace the branding
+
+As this is a public repository it does not include corporate branding. Replace the files in the `images` subfolder with the corporate versions then reload your browser to see the presentation with corporate branding. 
+
+## Step 2 - Edit `demo.ejs`
 
 You can edit `webpres/demo.ejs` directly. If you are new to `html` you can find loads of help online. [W3Schools](https://www.w3schools.com/) or [codeacademy](https://www.codecademy.com/) are good places to start.
 
@@ -125,7 +127,7 @@ localhost:8000/export/demo
 
 This will generate a `zip` file. Your audience can extract the files, double click on the `html` file and view the presentation.
 
-## Step 2 - Generate new presentations
+## Step 3 - Generate new presentations
 
 Create a copy of `demo.ejs` and give it a name for your new presentation.
 
@@ -143,7 +145,7 @@ The server will generate your new presentation and you can also export it to sha
 localhost:8000/export/<i>name of your ejs file</i>
 </pre> 
 
-## Step 3 - Share live presentations
+## Step 4 - Share live presentations
 
 > This step is not yet automated for beginners
 
@@ -163,7 +165,7 @@ You will also be able to use the whole web ecosystem to do things such as:
 - Integrating other services such as live chat and chat bots
 - Personalisation and accessibility such as audio transcription, font size and high contrast.
 
-## Step 4 - Presentations as a Service
+## Step 5 - Presentations as a Service
 
 >The instructions for this step are beyond the scope of this guide. 
 
