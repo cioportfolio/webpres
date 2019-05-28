@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Web presentation demonstration</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/nttdata.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+				<img class="black-logo" src="images/logo-black.svg">
+				<img class="white-logo" src="images/logo-white.svg">
+				<img class="side-banner-top" src="images/swirl-small.png">
+				<img class="side-banner-middle" src="images/caligraphy.png">
+				<div class="side-banner-bottom">
+					<img src="images/gg.png">
+				</div>
+				<img class="watermark" src="images/swirl.png">
+				<div class="copyright">© 2019 NTT DATA All Rights Reserved.</div>
+			<div class="slides">
+<!-- SLIDE CONTENT STARTS HERE -->
+<%- include(file) %>
+<!-- SLIDE CONTENT ENDS HERE -->
+				</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				slideNumber: true,
+				center: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+
+		<script type="text/javascript" src="lib/js/viewer.min.js"></script>
+
+	</body>
+</html>

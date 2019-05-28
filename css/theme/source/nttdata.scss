@@ -1,0 +1,328 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 42px;
+$mainFont: Arial, sans-serif;
+$headingFont: Arial, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+$nttRed: #CA0206;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal {
+    section {
+        height: 100%;
+    }
+    h1, h2 {
+        text-transform: none;
+        text-align: left;
+    }
+
+    li {
+        padding: auto;
+    }
+
+    p, td {
+//        margin: 5px 0;
+        vertical-align: middle;
+    }
+    .side-banner-top {
+        width: 24px;
+        height: auto;
+        position: fixed;
+        top: 22px;
+        right: 22px;
+    //    transform: scale(0.5,0.5);
+        z-index: 2;
+    }
+
+    .side-banner-middle {
+        width: 14px;
+        height: auto;
+        position: fixed;
+        top: 55px;
+        right: 27px;
+    //    transform: scale(0.5,0.5);
+        z-index: 2;
+    }
+
+    .copyright {
+        font-size: 7px;
+        position: fixed;  
+        z-index: 1;
+    }
+
+    .watermark {
+        width: 692px;
+        height: auto;
+        position: fixed;
+        bottom: 0cm;
+        right: 0cm;
+        z-index: 1;
+    }
+
+    content {
+        position: fixed;
+        left: 67px;
+        width: 866px;
+        font-size: 18px;
+        text-align: left;
+        vertical-align: middle;
+
+        ol {
+            list-style: none;
+            counter-reset: my-awesome-counter;
+            li {
+                counter-increment: my-awesome-counter;
+            }
+            li::before {
+            content: "0" counter(my-awesome-counter) ". ";
+            color: $nttRed;
+            font-weight: bold;
+            }
+        }
+        
+        ul {
+            li {
+                list-style: none;
+                margin-left: 0;
+                padding-left: 1em;
+                text-indent: -1.5em;
+            }
+          
+            li::before {
+            color: $nttRed;  
+            /* color of bullet or square */
+          
+            content: "\2022"; 
+            /* Unicode of character to precede the list item */
+          
+            font-size: 1em; 
+            /* em or %*/
+           
+            padding-right: 1.1225em; 
+            /* use em*/
+          
+            position: relative;
+            top: 0em; 
+            /* use em or % */
+            }
+        }  
+    }
+
+    .classification {
+        p {
+            margin: 0;
+        }
+        padding: 5px;
+        div {
+            display: inline-block;
+            padding: 2px;
+        }
+        div:nth-child(1) {
+            text-align: right;
+        }
+        div:nth-child(2) {
+            border-style: dashed;
+            border-width: 1px;
+            border-color: white;
+        }
+        position: fixed;
+        bottom: 80px;
+        right: 80px;
+        font-size: 7px;
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    .slide-background.present {
+        z-index: -2;
+    }
+}
+
+.nttdata-main .reveal {
+    h1 {
+        font-size: 30px;
+        position: fixed;
+        top: 80px;
+        left: 67px;
+    }
+
+    h2 {
+        font-size: 18px;
+        position: fixed;
+        top: 115px;
+        left: 67px;
+        color: #7F7F7F;
+    }
+
+    .copyright {
+        bottom: 23px;
+        right: 67px;  
+    }
+    .black-logo {
+        height: 10px;
+        width: auto;
+        position: fixed;
+        bottom: 23px;
+        left: 67px;
+        z-index: 1;
+    }
+    .white-logo, .side-banner-bottom {
+        display: none;
+    }
+
+    content {
+        top: 145px;
+    }
+}
+
+.nttdata-divide .reveal {
+    h2 {
+        color: #7F7F7F;
+    }
+    .white-logo {
+        height: 10px;
+        width: auto;
+        position: fixed;
+        bottom: 23px;
+        left: 67px;
+        z-index: 1;
+    }
+    .black-logo, .side-banner-bottom {
+        display: none;
+    }
+
+    .copyright {
+        display:none;
+    }
+}
+
+.nttdata-divide .reveal,
+.nttdata-title .reveal {
+    color: white;
+
+    h1 {
+        max-width: 60%;
+        color: white;
+        font-size: 45px;
+        position: fixed;
+        bottom: 310px;
+        left: 67px;
+    }
+
+    h2 {
+        max-width: 60%;
+        font-size: 25px;
+        position: fixed;
+        top: 415px;
+        left: 67px;
+    }
+
+    content {
+        top: 533px;
+    }
+}
+
+.nttdata-title .reveal {
+    h2 {
+        color: white;
+    }
+    .controls {
+        .navigate-right {
+            right: 5.5em;
+        }
+        .navigate-left {
+            right: 10.5em;
+        }
+        .navigate-up, navigate-down {
+            right: 8.2em;
+        }
+    }
+    .side-banner-bottom {
+        position: fixed;
+        width: 68px;
+        height: 100%;
+        right: 0px;
+        background-color: rgba(0,0,0,0.51);
+        img {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+        }
+        z-index: 1;
+    }
+
+    .copyright {
+        bottom: 25px;
+        left: 67px;   
+    }
+    .black-logo, .watermark {
+        display: none;
+    }
+    .white-logo {
+        position: fixed;
+        width: 141px;
+        height: auto;
+        top: 53px;
+        left:67px;
+        z-index: 1;
+    }
+
+    .backgrounds:before {
+        content: "";
+        width: 20%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0.0), rgba(0,0,0,0.3));
+        z-index: -1;
+    }
+    .backgrounds:after {
+        content: "";
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0.4), rgba(0,0,0,0));
+        z-index: -1;
+    }
+}
+
