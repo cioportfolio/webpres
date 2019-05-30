@@ -53,7 +53,7 @@ Your favourite search engine will help you find lists of commands and explain er
 Start up your command line and type in this command to download a copy of the playpen software:
 
 ```
-git clone https://github.com/cioportfolio/webpres.git
+git clone https://github.com/cioportfolio/webpres.git --config core.autocrlf=false
 ```
 
 Typing `dir` (or `ls` on a Mac) will show a list of your folder and you will see a new `webpres` folder there. Move to that folder by typing:
