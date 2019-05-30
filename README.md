@@ -119,7 +119,15 @@ The software uses [reveal.js](https://revealjs.com) to build the slides and navi
 
 You may notice some special `<%- include... %>` tag in the demo file. This is an extension of `html` called `ejs` which lets you put repeated content in a macro and re-use it in your presentations. You can learn about ejs at [ejs.co](https://ejs.co/)
 
-If you want to share the presentation with other people type the following into your browser address bar.
+There are two ways to share the presentation with other people - a static pdf and an interactive personal copy.
+
+For a pdf type the following into your browser address bar:
+
+```
+localhost:8000/pdf/demo
+```
+
+For an interactive personal copy type the following into your browswer address bar:
 
 ```
 localhost:8000/export/demo

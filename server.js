@@ -28,6 +28,22 @@ app.get('/export/:file', (req, res) => {
     });
 })
 
+app.get('/pdf/:file', (req, res) => {
+  pdf = exec('. /vagrant/pdf.sh ' + req.params.file, {shell: '/bin/bash'});
+  
+  pdf.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
+  
+  pdf.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`);
+  });
+  
+  pdf.on('close', (code) => {
+//      res.render('export', {file: req.params.file, code: code});
+      res.download('/vagrant/pdf/'+req.params.file+'.pdf')
+  });
+})
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)

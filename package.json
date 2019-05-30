@@ -42,6 +42,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "decktape": "^2.9.2",
     "ejs": "^2.6.1",
     "ejs-cli": "^2.0.1"
   }
