@@ -12,7 +12,8 @@ app.get('/:file', (req, res) => {
 })
 
 app.get('/export/:file', (req, res) => {
-    exp = exec('. /vagrant/export.sh ' + req.params.file, {shell: '/bin/bash'});
+
+    exp = exec('. /vagrant/export.sh \'{"file": "../' + req.params.file + '"}\'', {shell: '/bin/bash'});
     
     exp.stdout.on('data', (data) => {
       console.log(`stdout: ${data}`);
@@ -24,12 +25,12 @@ app.get('/export/:file', (req, res) => {
     
     exp.on('close', (code) => {
 //      res.render('export', {file: req.params.file, code: code});
-        res.download('/vagrant/export/'+req.params.file+'.zip')
+        res.download('/vagrant/export/export.zip')
     });
 })
 
 app.get('/pdf/:file', (req, res) => {
-  pdf = exec('. /vagrant/pdf.sh ' + req.params.file, {shell: '/bin/bash'});
+  pdf = exec('. /vagrant/pdf.sh "' + req.params.file + '"', {shell: '/bin/bash'});
   
   pdf.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
@@ -41,7 +42,7 @@ app.get('/pdf/:file', (req, res) => {
   
   pdf.on('close', (code) => {
 //      res.render('export', {file: req.params.file, code: code});
-      res.download('/vagrant/pdf/'+req.params.file+'.pdf')
+      res.download('/vagrant/pdf/export.pdf')
   });
 })
 
