@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 8000
+const port = process.env.PORT || 8000
 const { exec } = require('child_process');
 
 app.set('view engine', 'ejs')

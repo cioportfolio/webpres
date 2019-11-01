@@ -1,20 +1,9 @@
-/**
- * White theme for reveal.js. This is the opposite of the 'black' theme.
- *
- * By Hakim El Hattab, http://hakim.se
- */
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
-  color: #fff; }
-
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
   background: #fff;
-  background-color: #fff; }
-
-.reveal {
+  background-color: #fff; 
   font-family: Arial, sans-serif;
   font-size: 42px;
   font-weight: normal;
@@ -30,20 +19,15 @@ body {
   background: #98bdef;
   text-shadow: none; }
 
-.reveal .slides section,
-.reveal .slides section > section {
-  line-height: 1.3;
-  font-weight: inherit; }
-
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1,
-.reveal h2,
-.reveal h3,
-.reveal h4,
-.reveal h5,
-.reveal h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 20px 0;
   color: #222;
   font-family: Arial, sans-serif;
@@ -54,75 +38,75 @@ body {
   text-shadow: none;
   word-wrap: break-word; }
 
-.reveal h1 {
+h1 {
   font-size: 2.5em; }
 
-.reveal h2 {
+h2 {
   font-size: 1.6em; }
 
-.reveal h3 {
+h3 {
   font-size: 1.3em; }
 
-.reveal h4 {
+h4 {
   font-size: 1em; }
 
-.reveal h1 {
+h1 {
   text-shadow: none; }
 
 /*********************************************
  * OTHER
  *********************************************/
-.reveal p {
+p {
   margin: 20px 0;
   line-height: 1.3; }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img,
-.reveal video,
-.reveal iframe {
+img,
+video,
+iframe {
   max-width: 95%;
   max-height: 95%; }
 
-.reveal strong,
-.reveal b {
+strong,
+b {
   font-weight: bold; }
 
-.reveal em {
+em {
   font-style: italic; }
 
-.reveal ol,
-.reveal dl,
-.reveal ul {
+ol,
+dl,
+ul {
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em; }
 
-.reveal ol {
+ol {
   list-style-type: decimal; }
 
-.reveal ul {
+ul {
   list-style-type: disc; }
 
-.reveal ul ul {
+ul ul {
   list-style-type: square; }
 
-.reveal ul ul ul {
+ul ul ul {
   list-style-type: circle; }
 
-.reveal ul ul,
-.reveal ul ol,
-.reveal ol ol,
-.reveal ol ul {
+ul ul,
+ul ol,
+ol ol,
+ol ul {
   display: block;
   margin-left: 40px; }
 
-.reveal dt {
+dt {
   font-weight: bold; }
 
-.reveal dd {
+dd {
   margin-left: 40px; }
 
-.reveal blockquote {
+blockquote {
   display: block;
   position: relative;
   width: 70%;
@@ -132,14 +116,14 @@ body {
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
 
-.reveal blockquote p:first-child,
-.reveal blockquote p:last-child {
+blockquote p:first-child,
+blockquote p:last-child {
   display: inline-block; }
 
-.reveal q {
+q {
   font-style: italic; }
 
-.reveal pre {
+pre {
   display: block;
   position: relative;
   width: 90%;
@@ -151,141 +135,113 @@ body {
   word-wrap: break-word;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); }
 
-.reveal code {
+code {
   font-family: monospace;
   text-transform: none; }
 
-.reveal pre code {
+pre code {
   display: block;
   padding: 5px;
   overflow: auto;
   max-height: 400px;
   word-wrap: normal; }
 
-.reveal table {
+table {
   margin: auto;
   border-collapse: collapse;
   border-spacing: 0; }
 
-.reveal table th {
+table th {
   font-weight: bold; }
 
-.reveal table th,
-.reveal table td {
+table th,
+table td {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
   border-bottom: 1px solid; }
 
-.reveal table th[align="center"],
-.reveal table td[align="center"] {
+table th[align="center"],
+table td[align="center"] {
   text-align: center; }
 
-.reveal table th[align="right"],
-.reveal table td[align="right"] {
+table th[align="right"],
+table td[align="right"] {
   text-align: right; }
 
-.reveal table tbody tr:last-child th,
-.reveal table tbody tr:last-child td {
+table tbody tr:last-child th,
+table tbody tr:last-child td {
   border-bottom: none; }
 
-.reveal sup {
+sup {
   vertical-align: super;
   font-size: smaller; }
 
-.reveal sub {
+sub {
   vertical-align: sub;
   font-size: smaller; }
 
-.reveal small {
+small {
   display: inline-block;
   font-size: 0.6em;
   line-height: 1.2em;
   vertical-align: top; }
 
-.reveal small * {
+small * {
   vertical-align: top; }
 
 /*********************************************
  * LINKS
  *********************************************/
-.reveal a {
+a {
   color: #2a76dd;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
-.reveal a:hover {
+a:hover {
   color: #6ca0e8;
   text-shadow: none;
   border: none; }
 
-.reveal .roll span:after {
+.roll span:after {
   color: #fff;
   background: #1a53a1; }
 
 /*********************************************
  * IMAGES
  *********************************************/
-.reveal section img {
+img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
   border: 4px solid #222;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
-.reveal section img.plain {
+img.plain {
   border: 0;
   box-shadow: none; }
 
-.reveal a img {
+a img {
   -webkit-transition: all .15s linear;
   -moz-transition: all .15s linear;
   transition: all .15s linear; }
 
-.reveal a:hover img {
+a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #2a76dd;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
-/*********************************************
- * NAVIGATION CONTROLS
- *********************************************/
-.reveal .controls {
-  color: #2a76dd; }
-
-/*********************************************
- * PROGRESS BAR
- *********************************************/
-.reveal .progress {
-  background: rgba(0, 0, 0, 0.2);
-  color: #2a76dd; }
-
-.reveal .progress span {
-  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
-
-/*********************************************
- * PRINT BACKGROUND
- *********************************************/
-@media print {
-  .backgrounds {
-    background-color: #fff; } }
-
-.reveal section {
-  height: 100%; }
-
-.reveal h1, .reveal h2 {
+h1, h2 {
   text-transform: none;
   text-align: left; }
 
-.reveal li {
+li {
   padding: auto; }
 
-.reveal p, .reveal td {
+p, td {
   vertical-align: middle; }
 
-.reveal .side-banner-top {
+.side-banner-top {
   width: 24px;
   height: auto;
   position: fixed;
@@ -293,7 +249,7 @@ body {
   right: 22px;
   z-index: 2; }
 
-.reveal .side-banner-middle {
+.side-banner-middle {
   width: 14px;
   height: auto;
   position: fixed;
@@ -301,12 +257,12 @@ body {
   right: 27px;
   z-index: 2; }
 
-.reveal .copyright {
+.copyright {
   font-size: 7px;
   position: fixed;
   z-index: 1; }
 
-.reveal .watermark {
+.watermark {
   width: 692px;
   height: auto;
   position: fixed;
@@ -314,80 +270,43 @@ body {
   right: 0cm;
   z-index: 1; }
 
-.reveal content {
-  position: fixed;
-  left: 67px;
-  width: 866px;
-  font-size: 18px;
-  text-align: left;
-  vertical-align: middle; }
-  .reveal content ol {
-    list-style: none;
-    counter-reset: my-awesome-counter; }
-    .reveal content ol li {
-      counter-increment: my-awesome-counter; }
-    .reveal content ol li::before {
-      content: "0" counter(my-awesome-counter) ". ";
-      color: #CA0206;
-      font-weight: bold; }
-  .reveal content ul li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 1em;
-    text-indent: -1.5em; }
-  .reveal content ul li::before {
-    color: #CA0206;
-    /* color of bullet or square */
-    content: "\2022";
-    /* Unicode of character to precede the list item */
-    font-size: 1em;
-    /* em or %*/
-    padding-right: 1.1225em;
-    /* use em*/
-    position: relative;
-    top: 0em;
-    /* use em or % */ }
-
-.reveal .classification {
+.classification {
   padding: 5px;
   position: fixed;
   bottom: 80px;
   right: 80px;
   font-size: 7px;
   background-color: rgba(0, 0, 0, 0.2); }
-  .reveal .classification p {
+  .classification p {
     margin: 0; }
-  .reveal .classification div {
+  .classification div {
     display: inline-block;
     padding: 2px; }
-  .reveal .classification div:nth-child(1) {
+  .classification div:nth-child(1) {
     text-align: right; }
-  .reveal .classification div:nth-child(2) {
+  .classification div:nth-child(2) {
     border-style: dashed;
     border-width: 1px;
     border-color: white; }
 
-.reveal .slide-background.present {
-  z-index: -2; }
-
-.nttdata-main .reveal h1 {
+.nttdata-main h1 {
   font-size: 30px;
   position: fixed;
   top: 80px;
   left: 67px; }
 
-.nttdata-main .reveal h2 {
+.nttdata-main h2 {
   font-size: 18px;
   position: fixed;
   top: 115px;
   left: 67px;
   color: #7F7F7F; }
 
-.nttdata-main .reveal .copyright {
+.nttdata-main .copyright {
   bottom: 23px;
   right: 67px; }
 
-.nttdata-main .reveal .black-logo {
+.nttdata-main .black-logo {
   height: 10px;
   width: auto;
   position: fixed;
@@ -395,16 +314,16 @@ body {
   left: 67px;
   z-index: 1; }
 
-.nttdata-main .reveal .white-logo, .nttdata-main .reveal .side-banner-bottom {
+.nttdata-main .white-logo, .nttdata-main .side-banner-bottom {
   display: none; }
 
-.nttdata-main .reveal content {
+.nttdata-main content {
   top: 145px; }
 
-.nttdata-divide .reveal h2 {
+.nttdata-divide h2 {
   color: #7F7F7F; }
 
-.nttdata-divide .reveal .white-logo {
+.nttdata-divide .white-logo {
   height: 10px;
   width: auto;
   position: fixed;
@@ -412,66 +331,57 @@ body {
   left: 67px;
   z-index: 1; }
 
-.nttdata-divide .reveal .black-logo, .nttdata-divide .reveal .side-banner-bottom {
+.nttdata-divide .black-logo, .nttdata-divide .side-banner-bottom {
   display: none; }
 
-.nttdata-divide .reveal .copyright {
+.nttdata-divide .copyright {
   display: none; }
 
 .nttdata-divide .reveal,
-.nttdata-title .reveal {
+.nttdata-title {
   color: white; }
-  .nttdata-divide .reveal h1,
-  .nttdata-title .reveal h1 {
+  .nttdata-divide h1,
+  .nttdata-title h1 {
     max-width: 60%;
     color: white;
     font-size: 45px;
     position: fixed;
     bottom: 310px;
     left: 67px; }
-  .nttdata-divide .reveal h2,
-  .nttdata-title .reveal h2 {
+  .nttdata-divide h2,
+  .nttdata-title h2 {
     max-width: 60%;
     font-size: 25px;
     position: fixed;
     top: 415px;
     left: 67px; }
-  .nttdata-divide .reveal content,
-  .nttdata-title .reveal content {
+  .nttdata-divide content,
+  .nttdata-title content {
     top: 533px; }
 
-.nttdata-title .reveal h2 {
+.nttdata-title h2 {
   color: white; }
 
-.nttdata-title .reveal .controls .navigate-right {
-  right: 5.5em; }
-
-.nttdata-title .reveal .controls .navigate-left {
-  right: 10.5em; }
-
-.nttdata-title .reveal .controls .navigate-up, .nttdata-title .reveal .controls navigate-down {
-  right: 8.2em; }
-
-.nttdata-title .reveal .side-banner-bottom {
+.nttdata-title .side-banner-bottom {
   position: fixed;
   width: 68px;
   height: 100%;
   right: 0px;
   background-color: rgba(0, 0, 0, 0.51);
   z-index: 1; }
-  .nttdata-title .reveal .side-banner-bottom img {
+  .nttdata-title .side-banner-bottom img {
     position: absolute;
     bottom: 0px;
     width: 100%; }
 
-.nttdata-title .reveal .copyright {
+.nttdata-title .copyright {
   bottom: 25px;
   left: 67px; }
 
-.nttdata-title .reveal .black-logo, .nttdata-title .reveal .watermark {
+.nttdata-title .black-logo, .nttdata-title .watermark {
   display: none; }
 
-.nttdata-title .reveal .white-logo {
+.nttdata-title .white-logo {
   position: fixed;
   width: 141px;
   height: auto;
@@ -479,7 +389,7 @@ body {
   left: 67px;
   z-index: 1; }
 
-.nttdata-title .reveal .backgrounds:before {
+.nttdata-title .backgrounds:before {
   content: "";
   width: 20%;
   height: 100%;
@@ -489,7 +399,7 @@ body {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
   z-index: -1; }
 
-.nttdata-title .reveal .backgrounds:after {
+.nttdata-title .backgrounds:after {
   content: "";
   width: 60%;
   height: 100%;
